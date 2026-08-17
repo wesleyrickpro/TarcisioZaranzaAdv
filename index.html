@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Tarcísio Zaranza Advocacia — Relatório de Campanha</title>
+<title>Tarcísio Zaranza Advocacia — Relatório de Campanha · Semana 2</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,16 +36,14 @@
   .glass.orange { background: rgba(234,88,12,0.14); border: 1px solid rgba(249,115,22,0.35); }
   .glass.amber  { background: rgba(232,184,75,0.09); border: 1px solid rgba(232,184,75,0.28); }
 
-  /* Header */
   .header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem; padding: 0.9rem 1.1rem; }
   .logo {
-  width: 46px; height: 46px; border-radius: 13px; flex-shrink: 0;
-  background: rgba(255,255,255,0.08);
-  overflow: hidden;
-}
-.logo img {
-  width: 100%; height: 100%; object-fit: cover;
-}
+    width: 46px; height: 46px; border-radius: 13px; flex-shrink: 0;
+    background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: #fff;
+    letter-spacing: 0.02em;
+  }
   .brand-title { font-family: 'Bebas Neue', sans-serif; font-size: 21px; letter-spacing: 0.05em; line-height: 1.1; }
   .brand-sub { font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.45); margin-top: 3px; letter-spacing: 0.02em; }
   .period-pill {
@@ -57,107 +55,126 @@
   }
   .period-pill .sep { color: rgba(249,115,22,0.5); margin: 0 6px; }
 
-  /* Section title */
   .section-title {
     font-size: 10px; font-weight: 800; text-transform: uppercase;
     letter-spacing: 0.1em; color: rgba(255,255,255,0.38);
     margin: 1.6rem 0 10px; padding-left: 2px;
   }
 
-  /* Intro */
   .intro-card { padding: 1.15rem 1.2rem; margin-bottom: 1rem; }
   .intro-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.09em; color: rgba(249,115,22,0.75); margin-bottom: 10px; }
-  .intro-body { font-size: 14px; font-weight: 600; line-height: 1.75; color: rgba(255,255,255,0.92); }
+  .intro-body { font-size: 14px; font-weight: 600; line-height: 1.7; color: rgba(255,255,255,0.92); }
   .intro-body b { color: #F97316; font-weight: 800; }
 
-  /* KPI grid */
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
   .metric-card { padding: 0.95rem 1rem; border-radius: 20px; }
   .metric-card.orange { background: rgba(234,88,12,0.14); border: 1px solid rgba(249,115,22,0.32); }
-  .metric-card.amber  { background: rgba(232,184,75,0.10); border: 1px solid rgba(232,184,75,0.32); }
   .metric-card.neutral { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.11); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
   .m-label { font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
   .metric-card.orange .m-label { color: rgba(249,115,22,0.75); }
-  .metric-card.amber  .m-label { color: rgba(232,184,75,0.8); }
   .m-value { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: #fff; line-height: 1; letter-spacing: 0.01em; }
   .metric-card.orange .m-value { color: #F97316; }
-  .metric-card.amber  .m-value { color: #E8B84B; }
   .m-note { font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.4); margin-top: 6px; line-height: 1.4; }
   .metric-card.orange .m-note { color: rgba(249,115,22,0.7); }
-  .metric-card.amber  .m-note { color: rgba(232,184,75,0.72); }
 
-  /* Learning card (âmbar) */
-  .warn-card { padding: 1.25rem 1.3rem; margin-bottom: 1rem; }
-  .warn-title { font-size: 13.5px; font-weight: 800; color: #E8B84B; letter-spacing: 0.01em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
-  .warn-body { font-size: 13.5px; font-weight: 600; line-height: 1.75; color: rgba(255,255,255,0.78); }
-  .warn-body b { color: #E8B84B; font-weight: 800; }
-  .warn-body p { margin-bottom: 12px; }
-  .warn-body p:last-child { margin-bottom: 0; }
+  .chart-card { padding: 1.2rem 1.2rem 1.3rem; margin-bottom: 10px; }
+  .chart-title { font-size: 12.5px; font-weight: 800; color: #fff; margin-bottom: 3px; }
+  .chart-sub { font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,0.45); margin-bottom: 1.2rem; letter-spacing: 0.02em; }
 
-  /* Funnel */
-  .funnel-card { padding: 1.15rem 1.2rem 1.2rem; margin-bottom: 10px; }
-  .funnel-title { font-size: 12.5px; font-weight: 800; color: #fff; margin-bottom: 2px; }
-  .funnel-subtitle { font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,0.45); margin-bottom: 1rem; letter-spacing: 0.02em; }
-  .funnel-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0.7rem 0.9rem; margin-bottom: 8px;
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 14px;
+  .bars-grow {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px; align-items: end;
+    height: 170px; padding: 0 4px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 10px;
   }
-  .funnel-row.cut {
-    background: rgba(232,184,75,0.10);
-    border: 1px solid rgba(232,184,75,0.35);
+  .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: end; height: 100%; }
+  .bar-value { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: #fff; line-height: 1; margin-bottom: 6px; }
+  .bar-value.hl { color: #F97316; }
+  .bar-value.amber-hl { color: #E8B84B; }
+  .bar {
+    width: 100%; border-radius: 10px 10px 0 0;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-bottom: none; min-height: 6px;
   }
-  .funnel-row .fr-label { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.7); }
-  .funnel-row.cut .fr-label { color: #E8B84B; }
-  .funnel-row .fr-value { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: #fff; line-height: 1; }
-  .funnel-row.cut .fr-value { color: #E8B84B; }
-  .funnel-note {
-    font-size: 12px; font-weight: 600; color: rgba(232,184,75,0.75);
-    margin-top: 12px; line-height: 1.6; text-align: center;
+  .bar.hl {
+    background: linear-gradient(180deg, #F97316 0%, #C2410C 100%);
+    border: 1px solid rgba(249,115,22,0.5); border-bottom: none;
   }
-  .funnel-note b { color: #E8B84B; font-weight: 800; }
+  .bar.amber-hl {
+    background: linear-gradient(180deg, rgba(232,184,75,0.55) 0%, rgba(232,184,75,0.85) 100%);
+    border: 1px solid rgba(232,184,75,0.55); border-bottom: none;
+  }
+  .bar-empty {
+    width: 100%; height: 40%;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.35);
+    font-size: 10px; font-family: 'Manrope', sans-serif; font-weight: 700;
+    border: 1px dashed rgba(255,255,255,0.15); border-radius: 10px 10px 0 0;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .bar-labels {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px; text-align: center;
+    font-size: 9.5px; font-weight: 800;
+    color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+  .bar-labels span { padding: 0 2px; }
 
-  /* Hero */
-  .hero { padding: 1.5rem 1.3rem; margin-bottom: 1rem; text-align: center; }
-  .hero-tag {
-    display: inline-block; font-size: 10px; font-weight: 800;
-    text-transform: uppercase; letter-spacing: 0.1em; color: #F97316;
-    background: rgba(234,88,12,0.18); border-radius: 20px;
-    padding: 5px 14px; margin-bottom: 14px;
+  .chart-caption {
+    font-size: 12px; font-weight: 600;
+    color: rgba(255,255,255,0.62); line-height: 1.65;
+    padding: 0 2px; margin-top: 14px;
   }
-  .hero-name { font-family: 'Bebas Neue', sans-serif; font-size: 38px; line-height: 1; color: #F97316; letter-spacing: 0.02em; }
-  .hero-sub { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7); margin-top: 12px; line-height: 1.6; }
-  .hero-sub b { color: #F97316; font-weight: 800; }
+  .chart-caption b { color: #F97316; font-weight: 800; }
 
-  /* Investment card */
-  .invest-card { padding: 1.2rem 1.25rem; margin-bottom: 10px; }
-  .invest-title { font-size: 12.5px; font-weight: 800; color: #fff; margin-bottom: 3px; }
-  .invest-subtitle { font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,0.45); margin-bottom: 1rem; letter-spacing: 0.02em; }
-  .invest-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 14px; }
-  .invest-cell {
-    padding: 0.75rem 0.4rem; text-align: center;
-    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-  }
-  .invest-cell.hl {
+  .highlight-drop {
+    display: flex; align-items: center; gap: 14px;
+    padding: 1rem 1.2rem;
     background: rgba(234,88,12,0.14);
     border: 1px solid rgba(249,115,22,0.32);
+    border-radius: 18px;
+    margin: 14px 0 4px;
   }
-  .invest-cell-label {
-    font-size: 8.5px; font-weight: 800; color: rgba(255,255,255,0.42);
-    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px;
+  .drop-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px; color: #F97316; line-height: 1;
+    flex-shrink: 0;
   }
-  .invest-cell.hl .invest-cell-label { color: rgba(249,115,22,0.75); }
-  .invest-cell-value { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: #fff; line-height: 1; }
-  .invest-cell.hl .invest-cell-value { color: #F97316; }
-  .invest-note {
-    font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.68);
-    line-height: 1.7; padding: 0 2px;
+  .drop-desc {
+    font-size: 11.5px; font-weight: 700;
+    color: rgba(255,255,255,0.75); line-height: 1.5;
   }
-  .invest-note b { color: #F97316; font-weight: 800; }
+  .drop-desc b { color: #F97316; font-weight: 800; }
 
-  /* Next step */
+  .eng-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .eng-cell {
+    padding: 0.75rem 0.85rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+  }
+  .eng-label {
+    font-size: 9.5px; font-weight: 800;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: 5px;
+  }
+  .eng-value {
+    font-family: 'Bebas Neue', sans-serif; font-size: 26px;
+    color: #fff; line-height: 1;
+  }
+
+  .warn-card { padding: 1.2rem 1.25rem; margin-bottom: 10px; }
+  .warn-title { font-size: 12.5px; font-weight: 800; color: #E8B84B; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .warn-body { font-size: 13px; font-weight: 600; line-height: 1.7; color: rgba(255,255,255,0.75); }
+  .warn-body b { color: #E8B84B; font-weight: 800; }
+
   .next-card { padding: 1.2rem 1.25rem; margin-bottom: 10px; }
   .next-tag {
     display: inline-block; font-size: 10px; font-weight: 800;
@@ -165,16 +182,15 @@
     color: #F97316; background: rgba(234,88,12,0.14);
     border-radius: 20px; padding: 4px 12px; margin-bottom: 12px;
   }
-  .next-title { font-size: 15px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.35; }
-  .next-body { font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.72); line-height: 1.7; }
+  .next-title { font-size: 14.5px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.35; }
+  .next-body { font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.72); line-height: 1.7; }
   .next-body b { color: #F97316; font-weight: 800; }
 
-  /* Glossary */
   .gloss-card { padding: 1.1rem 1.2rem; margin-bottom: 10px; }
-  .gloss-item { padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .gloss-item { padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
   .gloss-item:last-child { border-bottom: none; }
-  .gloss-term { font-size: 12.5px; font-weight: 800; color: #fff; margin-bottom: 3px; }
-  .gloss-def { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); line-height: 1.55; }
+  .gloss-term { font-size: 12px; font-weight: 800; color: #fff; margin-bottom: 3px; }
+  .gloss-def { font-size: 11.5px; font-weight: 600; color: rgba(255,255,255,0.5); line-height: 1.55; }
 
   .footer {
     margin-top: 1.75rem; padding-top: 1.2rem;
@@ -190,152 +206,200 @@
 
   <!-- Header -->
   <div class="header glass">
-    <div class="logo"><img src="logotz.png" alt="Tarcísio Zaranza"></div>
+    <div class="logo">TZ</div>
     <div>
       <div class="brand-title">Tarcísio Zaranza</div>
       <div class="brand-sub">ADVOCACIA · Direito do Consumidor</div>
     </div>
   </div>
 
-  <span class="period-pill">29 jul <span class="sep">→</span> 5 ago · 2026 <span class="sep">·</span> 1ª semana</span>
+  <span class="period-pill">7 <span class="sep">→</span> 16 ago · 2026 <span class="sep">·</span> 2ª semana</span>
 
   <!-- Intro -->
   <div class="glass orange intro-card">
     <div class="intro-label">Resumo da semana</div>
     <div class="intro-body">
-      Esta primeira semana serviu como <b>base de leitura</b> para a nossa estratégia. A campanha alcançou <b>2.390 pessoas</b> em Manaus e região, gerou interesse — <b>16 pessoas foram redirecionadas ao WhatsApp</b> — e revelou um ajuste técnico importante para transformar esse interesse em contatos reais na próxima semana.
+      A campanha entrou em <b>fase de amadurecimento</b>. Os sinais mostram evolução consistente em contatos gerados e queda no custo por conversa.
     </div>
   </div>
 
   <!-- KPIs -->
   <div class="grid2">
     <div class="metric-card orange">
-      <div class="m-label">Pessoas alcançadas</div>
-      <div class="m-value">2.390</div>
-      <div class="m-note">em Manaus e região metropolitana</div>
+      <div class="m-label">Conversas iniciadas</div>
+      <div class="m-value">6</div>
+      <div class="m-note">novos contatos no WhatsApp</div>
     </div>
     <div class="metric-card orange">
-      <div class="m-label">Interesse gerado</div>
-      <div class="m-value">16</div>
-      <div class="m-note">clicaram para chamar no WhatsApp</div>
+      <div class="m-label">Custo por conversa</div>
+      <div class="m-value">R$19,30</div>
+      <div class="m-note">em tendência de queda</div>
     </div>
-    <div class="metric-card amber">
-      <div class="m-label">Conversas iniciadas</div>
-      <div class="m-value">0</div>
-      <div class="m-note">ponto de ajuste da próxima semana</div>
+    <div class="metric-card neutral">
+      <div class="m-label">Pessoas alcançadas</div>
+      <div class="m-value">4.125</div>
+      <div class="m-note">nas campanhas ativas</div>
     </div>
     <div class="metric-card neutral">
       <div class="m-label">Investido</div>
-      <div class="m-value">R$88,86</div>
+      <div class="m-value">R$115,78</div>
       <div class="m-note">de R$117,60 previstos</div>
     </div>
   </div>
 
-  <!-- Learning card (o coração do relatório) -->
+  <!-- CHART 1: Evolution of conversations -->
+  <p class="section-title">Evolução das conversas</p>
+  <div class="glass chart-card">
+    <div class="chart-title">Contatos gerados por período</div>
+    <div class="chart-sub">Comparativo cumulativo entre semanas</div>
+
+    <div class="bars-grow">
+      <div class="bar-col">
+        <span class="bar-value">0</span>
+        <div class="bar" style="height: 6%"></div>
+      </div>
+      <div class="bar-col">
+        <span class="bar-value">1</span>
+        <div class="bar" style="height: 17%"></div>
+      </div>
+      <div class="bar-col">
+        <span class="bar-value hl">6</span>
+        <div class="bar hl" style="height: 100%"></div>
+      </div>
+    </div>
+    <div class="bar-labels">
+      <span>Semana 1<br>29 jul → 5 ago</span>
+      <span>Semana 2<br>7 → 10 ago</span>
+      <span>Semana 2<br>7 → 16 ago</span>
+    </div>
+
+    <p class="chart-caption">
+      A partir da recalibragem técnica da campanha, o volume de contatos passou de <b>zero</b> para <b>6 conversas reais</b>.
+    </p>
+  </div>
+
+  <!-- CHART 2: Cost per conversation drop -->
+  <p class="section-title">Custo por contato</p>
+  <div class="glass chart-card">
+    <div class="chart-title">Evolução do custo por conversa</div>
+    <div class="chart-sub">Tendência descendente conforme o algoritmo aprende</div>
+
+    <div class="bars-grow">
+      <div class="bar-col">
+        <span class="bar-value" style="opacity: 0.4;">—</span>
+        <div class="bar-empty">sem dado</div>
+      </div>
+      <div class="bar-col">
+        <span class="bar-value amber-hl">R$45,99</span>
+        <div class="bar amber-hl" style="height: 100%"></div>
+      </div>
+      <div class="bar-col">
+        <span class="bar-value hl">R$19,30</span>
+        <div class="bar hl" style="height: 42%"></div>
+      </div>
+    </div>
+    <div class="bar-labels">
+      <span>Semana 1<br>29 jul → 5 ago</span>
+      <span>Semana 2<br>7 → 10 ago</span>
+      <span>Semana 2<br>7 → 16 ago</span>
+    </div>
+
+    <div class="highlight-drop">
+      <div class="drop-big">−58%</div>
+      <div class="drop-desc">
+        Queda no custo por conversa em <b>menos de 10 dias</b> — sinal característico da fase de aprendizado do algoritmo se estabilizando.
+      </div>
+    </div>
+
+    <p class="chart-caption">
+      A tendência aponta para <b>continuidade da queda no curto prazo</b>, à medida que o sistema refina o público qualificado. Não há garantia de números específicos, mas o comportamento observado é consistente com essa direção.
+    </p>
+  </div>
+
+  <!-- ENGAGEMENT -->
+  <p class="section-title">Engajamento da audiência</p>
+  <div class="glass chart-card">
+    <div class="chart-title">Interações totais no período</div>
+    <div class="chart-sub">Somatório das duas campanhas ativas</div>
+
+    <div class="eng-grid">
+      <div class="eng-cell">
+        <div class="eng-label">Impressões</div>
+        <div class="eng-value">6.008</div>
+      </div>
+      <div class="eng-cell">
+        <div class="eng-label">Alcance único</div>
+        <div class="eng-value">4.125</div>
+      </div>
+      <div class="eng-cell">
+        <div class="eng-label">Cliques totais</div>
+        <div class="eng-value">46</div>
+      </div>
+      <div class="eng-cell">
+        <div class="eng-label">Chegaram ao WhatsApp</div>
+        <div class="eng-value">29</div>
+      </div>
+      <div class="eng-cell">
+        <div class="eng-label">Engajamentos no post</div>
+        <div class="eng-value">52</div>
+      </div>
+      <div class="eng-cell">
+        <div class="eng-label">Reações ao post</div>
+        <div class="eng-value">14</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ATENÇÃO: localidade -->
+  <p class="section-title">Ponto de atenção</p>
   <div class="glass amber warn-card">
-    <div class="warn-title">Análise técnica da semana</div>
+    <div class="warn-title">Origem geográfica dos contatos</div>
     <div class="warn-body">
-      <p>A primeira semana confirmou dois pontos: o <b>público em Manaus responde ao anúncio</b> — 2.390 pessoas alcançadas e 16 chegaram ao WhatsApp —, e o <b>material publicitário atual tem espaço para performar melhor</b>.</p>
-
-      <p>Para a próxima semana, vamos evoluir a peça mantendo o mesmo público e investimento, com o objetivo de transformar esse interesse em <b>contatos reais</b>.</p>
-    </div>
-  </div>
-
-  <!-- Funnel -->
-  <div class="glass funnel-card">
-    <div class="funnel-title">O caminho da audiência</div>
-    <div class="funnel-subtitle">Onde o funil chegou e onde ele parou</div>
-
-    <div class="funnel-row">
-      <span class="fr-label">Viram o anúncio</span>
-      <span class="fr-value">2.390</span>
-    </div>
-    <div class="funnel-row">
-      <span class="fr-label">Clicaram para saber mais</span>
-      <span class="fr-value">18</span>
-    </div>
-    <div class="funnel-row">
-      <span class="fr-label">Chegaram ao WhatsApp</span>
-      <span class="fr-value">16</span>
-    </div>
-    <div class="funnel-row cut">
-      <span class="fr-label">Iniciaram conversa</span>
-      <span class="fr-value">0</span>
-    </div>
-
-    <div class="funnel-note">
-      O funil chegou perto — <b>o corte é no último passo</b>. É exatamente esse ponto que a nova configuração vai atacar.
-    </div>
-  </div>
-
-  <!-- Hero -->
-  <div class="glass orange hero">
-    <div class="hero-tag">Leitura principal</div>
-    <div class="hero-name">1º AJUSTE IDENTIFICADO</div>
-    <div class="hero-sub">A primeira semana revelou o <b>ponto exato</b> onde a estratégia precisa ser calibrada. Não é uma falha de público, criativo ou verba — é um ajuste técnico específico e corrigível.</div>
-  </div>
-
-  <!-- Investment -->
-  <p class="section-title">Sobre o investimento</p>
-  <div class="glass invest-card">
-    <div class="invest-title">Composição da verba desta semana</div>
-    <div class="invest-subtitle">Previsto, aplicado e não utilizado</div>
-
-    <div class="invest-grid">
-      <div class="invest-cell hl">
-        <div class="invest-cell-label">Previsto</div>
-        <div class="invest-cell-value">R$117,60</div>
-      </div>
-      <div class="invest-cell">
-        <div class="invest-cell-label">Investido</div>
-        <div class="invest-cell-value">R$88,86</div>
-      </div>
-      <div class="invest-cell">
-        <div class="invest-cell-label">Não utilizado</div>
-        <div class="invest-cell-value">R$28,74</div>
-      </div>
-    </div>
-
-    <div class="invest-note">
-      Para a próxima semana, o investimento mínimo necessário para manter o mesmo nível de alcance e capacidade de leitura estratégica é de <b>R$117,60</b>. Valores abaixo desse patamar reduzem significativamente a quantidade de pessoas alcançadas e a chance real de gerar contatos.
+      Foi identificado que <b>alguns contatos chegaram de fora do Amazonas</b>, mesmo com a segmentação regional aplicada. Isso pode ocorrer por comportamento orgânico do próprio Instagram — como compartilhamentos e buscas espontâneas pelo perfil — e não representa falha da campanha paga.
+      <br><br>
+      Um <b>diagnóstico técnico está em andamento</b> para identificar a fonte exata e reduzir a incidência nos próximos ciclos.
     </div>
   </div>
 
   <!-- Next step -->
-  <p class="section-title">O norte para a próxima semana</p>
+  <p class="section-title">O norte para os próximos dias</p>
   <div class="glass next-card">
     <div class="next-tag">Próximo passo</div>
-    <div class="next-title">Recalibrar o algoritmo para perseguir diretamente conversas no WhatsApp.</div>
+    <div class="next-title">Preservar o aprendizado e acompanhar a estabilização do custo.</div>
     <div class="next-body">
-      Vamos manter o <b>mesmo público</b> (Manaus e região), o <b>mesmo criativo</b> e o <b>mesmo investimento</b>, alterando apenas o objetivo interno da campanha para que o sistema busque pessoas com real intenção de iniciar contato. O objetivo dos próximos 7 dias é <b>transformar o interesse em conversas reais</b> e estabelecer o custo de referência dessa nova base.
+      Vamos manter o mesmo público, criativo e investimento, sem intervenções, para que o sistema continue refinando o público qualificado. Em paralelo, seguimos com a <b>investigação sobre a origem geográfica</b> dos contatos.
     </div>
   </div>
 
   <!-- Glossary -->
-  <p class="section-title">O que cada termo significa</p>
+  <p class="section-title">Glossário</p>
   <div class="glass gloss-card">
     <div class="gloss-item">
-      <div class="gloss-term">Pessoas alcançadas</div>
-      <div class="gloss-def">Quantas pessoas diferentes viram o anúncio pelo menos uma vez.</div>
-    </div>
-    <div class="gloss-item">
-      <div class="gloss-term">Clique no anúncio</div>
-      <div class="gloss-def">Quando alguém toca no anúncio para saber mais e é redirecionado para o WhatsApp do escritório.</div>
-    </div>
-    <div class="gloss-item">
       <div class="gloss-term">Conversa iniciada</div>
-      <div class="gloss-def">Quando a pessoa, após chegar ao WhatsApp, efetivamente envia a primeira mensagem para o escritório.</div>
+      <div class="gloss-def">Quando a pessoa envia a primeira mensagem para o escritório após ver o anúncio.</div>
     </div>
     <div class="gloss-item">
-      <div class="gloss-term">Objetivo do algoritmo</div>
-      <div class="gloss-def">A ação específica que o sistema é treinado a perseguir dentro do público — é o que define quem, dentro da audiência, o anúncio vai priorizar mostrar.</div>
+      <div class="gloss-term">Custo por conversa</div>
+      <div class="gloss-def">Valor médio investido para cada novo contato gerado no WhatsApp.</div>
+    </div>
+    <div class="gloss-item">
+      <div class="gloss-term">Alcance único</div>
+      <div class="gloss-def">Quantidade de pessoas diferentes que viram o anúncio pelo menos uma vez.</div>
+    </div>
+    <div class="gloss-item">
+      <div class="gloss-term">Engajamento no post</div>
+      <div class="gloss-def">Curtidas, reações, comentários e compartilhamentos recebidos.</div>
+    </div>
+    <div class="gloss-item">
+      <div class="gloss-term">Fase de aprendizado</div>
+      <div class="gloss-def">Período em que o sistema testa e refina o público, com custos ainda em ajuste.</div>
     </div>
   </div>
 
   <div class="footer">
     <b>Tarcísio Zaranza Advocacia</b><br>
-    Relatório de tráfego pago · 29 jul – 5 ago 2026<br>
-    R$ 88,86 investidos · Semana de calibragem
+    Relatório de tráfego pago · 7 a 16 ago 2026<br>
+    R$ 115,78 investidos · 6 contatos gerados · Fase de amadurecimento
   </div>
 
 </div>
