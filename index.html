@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Tarcísio Zaranza Advocacia — Relatório de Campanha · Semana 2</title>
+<title>Tarcísio Zaranza Advocacia — Relatório de Campanha</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -81,10 +81,10 @@
   .chart-title { font-size: 12.5px; font-weight: 800; color: #fff; margin-bottom: 3px; }
   .chart-sub { font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,0.45); margin-bottom: 1.2rem; letter-spacing: 0.02em; }
 
-  .bars-grow {
-    display: grid; grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px; align-items: end;
-    height: 170px; padding: 0 4px 8px;
+  .bars-compare {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 20px; align-items: end;
+    height: 170px; padding: 0 10px 8px;
     border-bottom: 1px solid rgba(255,255,255,0.08);
     margin-bottom: 10px;
   }
@@ -114,14 +114,13 @@
     border: 1px dashed rgba(255,255,255,0.15); border-radius: 10px 10px 0 0;
     text-transform: uppercase; letter-spacing: 0.05em;
   }
-  .bar-labels {
-    display: grid; grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px; text-align: center;
-    font-size: 9.5px; font-weight: 800;
-    color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em;
+  .bar-labels-2 {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 20px; text-align: center;
+    font-size: 10px; font-weight: 800;
+    color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em;
     line-height: 1.4;
   }
-  .bar-labels span { padding: 0 2px; }
 
   .chart-caption {
     font-size: 12px; font-weight: 600;
@@ -140,8 +139,8 @@
   }
   .drop-big {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px; color: #F97316; line-height: 1;
-    flex-shrink: 0;
+    font-size: 32px; color: #F97316; line-height: 1;
+    flex-shrink: 0; text-align: center;
   }
   .drop-desc {
     font-size: 11.5px; font-weight: 700;
@@ -213,13 +212,13 @@
     </div>
   </div>
 
-  <span class="period-pill">7 <span class="sep">→</span> 16 ago · 2026 <span class="sep">·</span> 2ª semana</span>
+  <span class="period-pill">1 JUL <span class="sep">→</span> 26 AGO · 2026 <span class="sep">·</span> FECHAMENTO</span>
 
   <!-- Intro -->
   <div class="glass orange intro-card">
-    <div class="intro-label">Resumo da semana</div>
+    <div class="intro-label">Diagnóstico de Criativos</div>
     <div class="intro-body">
-      A campanha entrou em <b>fase de amadurecimento</b>. Os sinais mostram evolução consistente em contatos gerados e queda no custo por conversa.
+      O teste A/B definiu um ângulo vencedor. A dor específica superou o jargão e o público qualificado que visualizou o anúncio está <b>pronto</b> para a conversão.
     </div>
   </div>
 
@@ -227,93 +226,79 @@
   <div class="grid2">
     <div class="metric-card orange">
       <div class="m-label">Conversas iniciadas</div>
-      <div class="m-value">6</div>
+      <div class="m-value">11</div>
       <div class="m-note">novos contatos no WhatsApp</div>
     </div>
     <div class="metric-card orange">
-      <div class="m-label">Custo por conversa</div>
-      <div class="m-value">R$19,30</div>
-      <div class="m-note">em tendência de queda</div>
+      <div class="m-label">Custo Vencedor</div>
+      <div class="m-value">R$19,62</div>
+      <div class="m-note">no criativo "Tarifas Bancárias"</div>
     </div>
     <div class="metric-card neutral">
       <div class="m-label">Pessoas alcançadas</div>
-      <div class="m-value">4.125</div>
-      <div class="m-note">nas campanhas ativas</div>
+      <div class="m-value">6.130</div>
+      <div class="m-note">contas únicas atingidas</div>
     </div>
     <div class="metric-card neutral">
       <div class="m-label">Investido</div>
-      <div class="m-value">R$115,78</div>
-      <div class="m-note">de R$117,60 previstos</div>
+      <div class="m-value">R$306,80</div>
+      <div class="m-note">soma das duas campanhas</div>
     </div>
   </div>
 
   <!-- CHART 1: Evolution of conversations -->
-  <p class="section-title">Evolução das conversas</p>
+  <p class="section-title">Testes de Abordagem</p>
   <div class="glass chart-card">
-    <div class="chart-title">Contatos gerados por período</div>
-    <div class="chart-sub">Comparativo cumulativo entre semanas</div>
+    <div class="chart-title">Volume de Contatos por Anúncio</div>
+    <div class="chart-sub">Comparativo direto entre as dores testadas</div>
 
-    <div class="bars-grow">
+    <div class="bars-compare">
       <div class="bar-col">
-        <span class="bar-value">0</span>
+        <span class="bar-value" style="opacity: 0.5;">0</span>
         <div class="bar" style="height: 6%"></div>
       </div>
       <div class="bar-col">
-        <span class="bar-value">1</span>
-        <div class="bar" style="height: 17%"></div>
-      </div>
-      <div class="bar-col">
-        <span class="bar-value hl">6</span>
+        <span class="bar-value hl">11</span>
         <div class="bar hl" style="height: 100%"></div>
       </div>
     </div>
-    <div class="bar-labels">
-      <span>Semana 1<br>29 jul → 5 ago</span>
-      <span>Semana 2<br>7 → 10 ago</span>
-      <span>Semana 2<br>7 → 16 ago</span>
+    <div class="bar-labels-2">
+      <span>Revisão Genérica</span>
+      <span style="color:#fff;">Tarifas Bancárias</span>
     </div>
 
     <p class="chart-caption">
-      A partir da recalibragem técnica da campanha, o volume de contatos passou de <b>zero</b> para <b>6 conversas reais</b>.
+      A oferta generalista sobre revisão de financiamentos bloqueou o funil. O foco no termo <b>"Tarifas Bancárias"</b> engajou instantaneamente a dor do consumidor, centralizando 100% dos leads da conta.
     </p>
   </div>
 
   <!-- CHART 2: Cost per conversation drop -->
-  <p class="section-title">Custo por contato</p>
+  <p class="section-title">Eficiência de Custo</p>
   <div class="glass chart-card">
-    <div class="chart-title">Evolução do custo por conversa</div>
-    <div class="chart-sub">Tendência descendente conforme o algoritmo aprende</div>
+    <div class="chart-title">Custo de Aquisição (CPA)</div>
+    <div class="chart-sub">Investimento necessário para gerar um lead</div>
 
-    <div class="bars-grow">
+    <div class="bars-compare">
       <div class="bar-col">
         <span class="bar-value" style="opacity: 0.4;">—</span>
-        <div class="bar-empty">sem dado</div>
+        <div class="bar-empty">R$90 gastos sem conversão</div>
       </div>
       <div class="bar-col">
-        <span class="bar-value amber-hl">R$45,99</span>
-        <div class="bar amber-hl" style="height: 100%"></div>
-      </div>
-      <div class="bar-col">
-        <span class="bar-value hl">R$19,30</span>
-        <div class="bar hl" style="height: 42%"></div>
+        <span class="bar-value hl">R$19,62</span>
+        <div class="bar hl" style="height: 80%"></div>
       </div>
     </div>
-    <div class="bar-labels">
-      <span>Semana 1<br>29 jul → 5 ago</span>
-      <span>Semana 2<br>7 → 10 ago</span>
-      <span>Semana 2<br>7 → 16 ago</span>
+    <div class="bar-labels-2">
+      <span>Revisão Genérica</span>
+      <span style="color:#fff;">Tarifas Bancárias</span>
     </div>
 
     <div class="highlight-drop">
-      <div class="drop-big">−58%</div>
+      <div class="drop-big">1.0%</div>
       <div class="drop-desc">
-        Queda no custo por conversa em <b>menos de 10 dias</b> — sinal característico da fase de aprendizado do algoritmo se estabilizando.
+        CTR (Taxa de cliques) validado no anúncio vencedor. O criativo certo <b>desbloqueou o leilão</b> e barateou o custo do lead.
       </div>
     </div>
-
-    <p class="chart-caption">
-      A tendência aponta para <b>continuidade da queda no curto prazo</b>, à medida que o sistema refina o público qualificado. Não há garantia de números específicos, mas o comportamento observado é consistente com essa direção.
-    </p>
   </div>
 
   <!-- ENGAGEMENT -->
@@ -325,49 +310,48 @@
     <div class="eng-grid">
       <div class="eng-cell">
         <div class="eng-label">Impressões</div>
-        <div class="eng-value">6.008</div>
+        <div class="eng-value">9.293</div>
       </div>
       <div class="eng-cell">
         <div class="eng-label">Alcance único</div>
-        <div class="eng-value">4.125</div>
+        <div class="eng-value">6.130</div>
       </div>
       <div class="eng-cell">
         <div class="eng-label">Cliques totais</div>
-        <div class="eng-value">46</div>
+        <div class="eng-value">77</div>
       </div>
       <div class="eng-cell">
-        <div class="eng-label">Chegaram ao WhatsApp</div>
-        <div class="eng-value">29</div>
+        <div class="eng-label">Cliques de saída</div>
+        <div class="eng-value">44</div>
       </div>
       <div class="eng-cell">
         <div class="eng-label">Engajamentos no post</div>
-        <div class="eng-value">52</div>
+        <div class="eng-value">86</div>
       </div>
       <div class="eng-cell">
         <div class="eng-label">Reações ao post</div>
-        <div class="eng-value">14</div>
+        <div class="eng-value">25</div>
       </div>
     </div>
   </div>
 
-  <!-- ATENÇÃO: localidade -->
+  <!-- ATENÇÃO: Layout -->
   <p class="section-title">Ponto de atenção</p>
   <div class="glass amber warn-card">
-    <div class="warn-title">Origem geográfica dos contatos</div>
+    <div class="warn-title">Limitação do Formato Estático</div>
     <div class="warn-body">
-      Foi identificado que <b>alguns contatos chegaram de fora do Amazonas</b>, mesmo com a segmentação regional aplicada. Isso pode ocorrer por comportamento orgânico do próprio Instagram — como compartilhamentos e buscas espontâneas pelo perfil — e não representa falha da campanha paga.
-      <br><br>
-      Um <b>diagnóstico técnico está em andamento</b> para identificar a fonte exata e reduzir a incidência nos próximos ciclos.
+      100% da verba foi consumida em peças exclusivamente de imagens estáticas.     
     </div>
   </div>
 
   <!-- Next step -->
   <p class="section-title">O norte para os próximos dias</p>
   <div class="glass next-card">
-    <div class="next-tag">Próximo passo</div>
-    <div class="next-title">Preservar o aprendizado e acompanhar a estabilização do custo.</div>
+    <div class="next-tag">Plano de Ação</div>
+    <div class="next-title">Transição para Reels e readequação estética das artes.</div>
     <div class="next-body">
-      Vamos manter o mesmo público, criativo e investimento, sem intervenções, para que o sistema continue refinando o público qualificado. Em paralelo, seguimos com a <b>investigação sobre a origem geográfica</b> dos contatos.
+      PRecisamos migrar o tema "Tarifas Bancárias" para o formato de <b>Reels (proporção vertical 9:16)</b>.
+      
     </div>
   </div>
 
@@ -379,7 +363,7 @@
       <div class="gloss-def">Quando a pessoa envia a primeira mensagem para o escritório após ver o anúncio.</div>
     </div>
     <div class="gloss-item">
-      <div class="gloss-term">Custo por conversa</div>
+      <div class="gloss-term">Custo por conversa (CPA)</div>
       <div class="gloss-def">Valor médio investido para cada novo contato gerado no WhatsApp.</div>
     </div>
     <div class="gloss-item">
@@ -387,19 +371,19 @@
       <div class="gloss-def">Quantidade de pessoas diferentes que viram o anúncio pelo menos uma vez.</div>
     </div>
     <div class="gloss-item">
-      <div class="gloss-term">Engajamento no post</div>
-      <div class="gloss-def">Curtidas, reações, comentários e compartilhamentos recebidos.</div>
+      <div class="gloss-term">CTR (Taxa de cliques)</div>
+      <div class="gloss-def">A porcentagem de pessoas que viram o seu anúncio e clicaram no link.</div>
     </div>
     <div class="gloss-item">
-      <div class="gloss-term">Fase de aprendizado</div>
-      <div class="gloss-def">Período em que o sistema testa e refina o público, com custos ainda em ajuste.</div>
+      <div class="gloss-term">Cliques de saída</div>
+      <div class="gloss-def">Número de vezes que as pessoas clicaram e efetivamente saíram das plataformas da Meta.</div>
     </div>
   </div>
 
   <div class="footer">
     <b>Tarcísio Zaranza Advocacia</b><br>
-    Relatório de tráfego pago · 7 a 16 ago 2026<br>
-    R$ 115,78 investidos · 6 contatos gerados · Fase de amadurecimento
+    Relatório de tráfego pago · Julho e Agosto 2026<br>
+    R$ 306,80 investidos · 11 contatos gerados
   </div>
 
 </div>
