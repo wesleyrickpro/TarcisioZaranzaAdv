@@ -27,7 +27,6 @@
   .insight-card{padding:.95rem 1.1rem;margin-bottom:.8rem;}
   .insight-label{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;margin-bottom:6px;}
   .glass.blue .insight-label{color:rgba(106,176,232,.85);}
-  .glass.amber .insight-label{color:rgba(232,184,75,.9);}
   .glass.green .insight-label{color:rgba(62,207,142,.85);}
   .insight-body{font-size:12.5px;font-weight:600;line-height:1.55;color:rgba(255,255,255,.9);}
   .insight-body b{font-weight:800;}
@@ -46,6 +45,7 @@
   .metric-card.green .m-note{color:rgba(62,207,142,.7);}
   .chart-card{padding:1rem 1.05rem 1.1rem;margin-bottom:9px;}
   .chart-title{font-size:11.5px;font-weight:800;color:#fff;margin-bottom:.9rem;}
+  .bars3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:end;height:120px;padding:0 6px 6px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:8px;}
   .bars4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;align-items:end;height:120px;padding:0 4px 6px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:8px;}
   .bcol{display:flex;flex-direction:column;align-items:center;justify-content:end;height:100%;}
   .bval{font-family:'Bebas Neue',sans-serif;font-size:16px;color:#fff;line-height:1;margin-bottom:5px;}
@@ -54,6 +54,7 @@
   .bar{width:100%;border-radius:8px 8px 0 0;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15);border-bottom:none;min-height:5px;}
   .bar.hl{background:linear-gradient(180deg,#3ecf8e 0%,#1f9e6b 100%);border:1px solid rgba(62,207,142,.5);border-bottom:none;}
   .bar.mid{background:linear-gradient(180deg,#6ab0e8 0%,#3d7fb8 100%);border:1px solid rgba(106,176,232,.5);border-bottom:none;}
+  .blabels3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;text-align:center;font-size:8.5px;font-weight:800;color:rgba(255,255,255,.55);text-transform:uppercase;line-height:1.3;}
   .blabels4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;text-align:center;font-size:8.5px;font-weight:800;color:rgba(255,255,255,.55);text-transform:uppercase;line-height:1.3;}
   .cap{font-size:11px;font-weight:600;color:rgba(255,255,255,.62);line-height:1.5;margin-top:11px;}
   .cap b{color:#3ecf8e;font-weight:800;}
@@ -62,13 +63,13 @@
   .pos-icon{font-size:16px;margin-bottom:5px;}
   .pos-num{font-family:'Bebas Neue',sans-serif;font-size:24px;color:#3ecf8e;line-height:1;margin-bottom:3px;}
   .pos-txt{font-size:10.5px;font-weight:700;color:rgba(255,255,255,.8);line-height:1.4;}
-  .days5{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
-  .d5{border-radius:13px;padding:.6rem .15rem;text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);}
-  .d5.top{background:rgba(62,207,142,.16);border:1px solid rgba(62,207,142,.4);}
-  .d5-l{font-size:8px;font-weight:800;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:4px;line-height:1.3;}
-  .d5.top .d5-l{color:rgba(62,207,142,.85);}
-  .d5-v{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;}
-  .d5.top .d5-v{color:#3ecf8e;font-size:23px;}
+  .days6{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;}
+  .d6{border-radius:12px;padding:.55rem .1rem;text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);}
+  .d6.top{background:rgba(62,207,142,.16);border:1px solid rgba(62,207,142,.4);}
+  .d6-l{font-size:7.5px;font-weight:800;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:4px;line-height:1.3;}
+  .d6.top .d6-l{color:rgba(62,207,142,.85);}
+  .d6-v{font-family:'Bebas Neue',sans-serif;font-size:19px;color:#fff;}
+  .d6.top .d6-v{color:#3ecf8e;font-size:22px;}
   .timeline{padding:1rem 1.1rem;margin-bottom:9px;}
   .tl-item{display:flex;gap:10px;padding-bottom:.9rem;}
   .tl-item:last-child{padding-bottom:0;}
@@ -94,110 +95,109 @@
     </div>
   </div>
 
-  <span class="period-pill">30 SET <span class="sep">→</span> 09 OUT · 2026</span>
+  <span class="period-pill">15 OUT <span class="sep">→</span> 22 OUT · 2026</span>
 
   <div class="glass green insight-card">
-    <div class="insight-label">Evolução confirmada</div>
-    <div class="insight-body">A campanha <b>voltou a acelerar</b>: o custo por conversa caiu <b>37%</b> e a velocidade de novos contatos é a <b>maior da história</b> da conta.</div>
+    <div class="insight-label">Consolidação</div>
+    <div class="insight-body">A campanha segue <b>bem acima do ciclo de setembro</b>: custo por conversa <b>28% menor</b>, custo por mil impressões <b>42% menor</b> e recorde de saídas para o WhatsApp.</div>
   </div>
 
   <p class="section-title">Resultado do período</p>
   <div class="grid2">
     <div class="metric-card green">
       <div class="m-label">Conversas</div>
-      <div class="m-value">8</div>
+      <div class="m-value">7</div>
       <div class="m-note">novos contatos no WhatsApp</div>
     </div>
     <div class="metric-card green">
       <div class="m-label">Custo por conversa</div>
-      <div class="m-value">R$21,96</div>
-      <div class="m-note">-37% vs ciclo anterior</div>
+      <div class="m-value">R$25,10</div>
+      <div class="m-note">-28% vs ciclo de setembro</div>
     </div>
     <div class="metric-card neutral">
       <div class="m-label">Investido</div>
-      <div class="m-value">R$175,69</div>
+      <div class="m-value">R$175,67</div>
       <div class="m-note">nos dias de veiculação</div>
     </div>
     <div class="metric-card green">
-      <div class="m-label">Alcance</div>
-      <div class="m-value">7.291</div>
-      <div class="m-note">+84% vs ciclo anterior</div>
+      <div class="m-label">Saída p/ WhatsApp</div>
+      <div class="m-value">65%</div>
+      <div class="m-note">de quem clica no link, recorde</div>
     </div>
   </div>
 
-  <p class="section-title">Velocidade da campanha</p>
+  <p class="section-title">Eficiência de custo</p>
   <div class="glass chart-card">
-    <div class="chart-title">Conversas por dia, ciclo a ciclo</div>
-    <div class="bars4">
-      <div class="bcol"><span class="bval">0,38</span><div class="bar" style="height:24%"></div></div>
-      <div class="bcol"><span class="bval mid">1,38</span><div class="bar mid" style="height:86%"></div></div>
-      <div class="bcol"><span class="bval mid">0,63</span><div class="bar mid" style="height:39%"></div></div>
-      <div class="bcol"><span class="bval hl">1,60</span><div class="bar hl" style="height:100%"></div></div>
+    <div class="chart-title">Custo por conversa, ciclo a ciclo</div>
+    <div class="bars3">
+      <div class="bcol"><span class="bval">R$34,89</span><div class="bar" style="height:100%"></div></div>
+      <div class="bcol"><span class="bval mid">R$21,96</span><div class="bar mid" style="height:63%"></div></div>
+      <div class="bcol"><span class="bval hl">R$25,10</span><div class="bar hl" style="height:72%"></div></div>
     </div>
-    <div class="blabels4"><span>Ciclo 1</span><span>Ciclo 2</span><span>Ciclo 3</span><span>Atual</span></div>
-    <p class="cap">O ciclo atual é o <b>mais veloz de todos</b>: +156% sobre o anterior.</p>
+    <div class="blabels3"><span>Setembro</span><span>30/09–04/10</span><span>Atual</span></div>
+    <p class="cap">Desde a recalibragem, o custo se mantém <b>estável na faixa de R$22–25</b>, bem abaixo do pico de setembro.</p>
   </div>
 
   <p class="section-title">O que está funcionando</p>
   <div class="pos-grid">
-    <div class="glass green pos-item"><div class="pos-icon">📲</div><div class="pos-num">50%</div><div class="pos-txt">de quem clica no link segue direto para o WhatsApp — recorde da conta</div></div>
-    <div class="glass green pos-item"><div class="pos-icon">💸</div><div class="pos-num">-46%</div><div class="pos-txt">no custo por mil impressões (R$36,28 → R$19,60)</div></div>
-    <div class="glass green pos-item"><div class="pos-icon">🎯</div><div class="pos-num">62,5%</div><div class="pos-txt">das conversas vieram do público 35+, o perfil mais qualificado</div></div>
-    <div class="glass green pos-item"><div class="pos-icon">⭐</div><div class="pos-num">R$9,00</div><div class="pos-txt">por conversa na faixa 45-54 — a mais eficiente</div></div>
+    <div class="glass green pos-item"><div class="pos-icon">🎯</div><div class="pos-num">R$10,17</div><div class="pos-txt">por conversa no Facebook Feed, que gerou 4 das 7 conversas</div></div>
+    <div class="glass green pos-item"><div class="pos-icon">💸</div><div class="pos-num">R$15,08</div><div class="pos-txt">custo por mil no Instagram Reels, o mais barato da campanha</div></div>
+    <div class="glass green pos-item"><div class="pos-icon">📲</div><div class="pos-num">26</div><div class="pos-txt">saídas para o WhatsApp, 17 delas vindas do Reels</div></div>
+    <div class="glass green pos-item"><div class="pos-icon">👥</div><div class="pos-num">57%</div><div class="pos-txt">das conversas vieram do público 35+, o mais qualificado</div></div>
+  </div>
+
+  <p class="section-title">Onde nascem as conversas</p>
+  <div class="glass chart-card">
+    <div class="chart-title">Conversas por posicionamento</div>
+    <div class="bars3">
+      <div class="bcol"><span class="bval hl">4</span><div class="bar hl" style="height:100%"></div></div>
+      <div class="bcol"><span class="bval mid">2</span><div class="bar mid" style="height:50%"></div></div>
+      <div class="bcol"><span class="bval">1</span><div class="bar" style="height:25%"></div></div>
+    </div>
+    <div class="blabels3"><span>Facebook<br>Feed</span><span>Instagram<br>Reels</span><span>Instagram<br>Feed</span></div>
+    <p class="cap">Facebook Feed e Instagram Reels concentram <b>6 das 7 conversas</b>.</p>
   </div>
 
   <p class="section-title">Conversas por dia</p>
   <div class="glass chart-card">
-    <div class="days5">
-      <div class="d5"><div class="d5-l">Qua<br>30/09</div><div class="d5-v">1</div></div>
-      <div class="d5 top"><div class="d5-l">Qui<br>01/10</div><div class="d5-v">3</div></div>
-      <div class="d5"><div class="d5-l">Sex<br>02/10</div><div class="d5-v">1</div></div>
-      <div class="d5 top"><div class="d5-l">Sáb<br>03/10</div><div class="d5-v">3</div></div>
-      <div class="d5"><div class="d5-l">Dom<br>04/10</div><div class="d5-v">0</div></div>
+    <div class="days6">
+      <div class="d6"><div class="d6-l">Qui<br>15/10</div><div class="d6-v">0</div></div>
+      <div class="d6"><div class="d6-l">Sex<br>16/10</div><div class="d6-v">2</div></div>
+      <div class="d6"><div class="d6-l">Sáb<br>17/10</div><div class="d6-v">1</div></div>
+      <div class="d6"><div class="d6-l">Dom<br>18/10</div><div class="d6-v">1</div></div>
+      <div class="d6 top"><div class="d6-l">Seg<br>19/10</div><div class="d6-v">3</div></div>
+      <div class="d6"><div class="d6-l">Ter<br>20/10</div><div class="d6-v">0</div></div>
     </div>
-    <p class="cap">Quinta e sábado concentraram <b>6 das 8 conversas</b>. O sábado segue como dia mais consistente da campanha.</p>
-  </div>
-
-  <p class="section-title">Do clique à conversa</p>
-  <div class="glass chart-card">
-    <div class="chart-title">Funil do período</div>
-    <div class="bars4">
-      <div class="bcol"><span class="bval">8.964</span><div class="bar" style="height:100%"></div></div>
-      <div class="bcol"><span class="bval mid">44</span><div class="bar mid" style="height:38%"></div></div>
-      <div class="bcol"><span class="bval mid">22</span><div class="bar mid" style="height:24%"></div></div>
-      <div class="bcol"><span class="bval hl">8</span><div class="bar hl" style="height:15%"></div></div>
-    </div>
-    <div class="blabels4"><span>Impressões</span><span>Cliques no link</span><span>Saídas p/ WhatsApp</span><span>Conversas</span></div>
-    <p class="cap">Metade de quem clica <b>realmente sai para conversar</b> — intenção alta.</p>
+    <p class="cap">A segunda-feira foi o melhor dia: <b>3 conversas a R$10,36</b> cada.</p>
   </div>
 
   <p class="section-title">Aprendizado consolidado</p>
   <div class="glass blue insight-card">
-    <div class="insight-label">Refino de público</div>
-    <div class="insight-body">Identificamos ao longo do período que o público <b>18-34 anos</b> não é o mais atrativo para este momento da campanha. O refino técnico já foi aplicado e passa a destinar o investimento de forma <b>mais assertiva para 35+</b>, onde estão as conversas mais qualificadas.</div>
+    <div class="insight-label">Refino de posicionamento</div>
+    <div class="insight-body">Identificamos ao longo do período que as conversas se concentram em <b>Facebook Feed e Instagram Reels</b>. O refino técnico passa a direcionar o investimento de forma <b>mais assertiva</b> para onde o público já responde.</div>
   </div>
 
   <p class="section-title">Ponto de atenção</p>
   <div class="glass amber insight-card">
-    <div class="insight-body">A taxa de cliques no link está em <b>0,49%</b>: o criativo estático já cumpriu seu papel e pede renovação. Um novo formato tende a recuperar o interesse sem aumentar o custo.</div>
+    <div class="insight-body">A taxa de cliques no link está em <b>0,48%</b>: o criativo estático já cumpriu seu papel e pede renovação. Um vídeo vertical aproveita o Reels, onde o custo é menor.</div>
   </div>
 
   <p class="section-title">Próximos passos</p>
   <div class="glass timeline">
-    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-title">Consolidar o público 35+ já configurado</div></div>
-    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-title">Novo criativo em Reels com a copy "Tarifas Bancárias"</div></div>
-    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-title">Reforçar o investimento no fim de semana</div></div>
+    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-title">Refinar posicionamentos: mais peso em Facebook Feed e Instagram Reels</div></div>
+    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-title">Novo criativo em vídeo vertical (Reels) com a copy "Tarifas Bancárias"</div></div>
+    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div></div><div class="tl-title">Manter o investimento diário contínuo para consolidar o aprendizado</div></div>
   </div>
 
   <div class="glass green cta-card">
-    <div class="cta-title">Mais veloz, mais barata, mais precisa</div>
-    <div class="cta-body">A campanha recuperou ritmo e já aponta para onde investir. O próximo ciclo é sobre refinar e escalar.</div>
+    <div class="cta-title">Custo estável, direção clara</div>
+    <div class="cta-body">A campanha já mostra onde as conversas nascem. O próximo ciclo é sobre concentrar o investimento nesses pontos.</div>
   </div>
 
   <div class="footer">
     <b>Tarcísio Zaranza Advocacia</b><br>
-    Relatório de investimento · 30 Set – 09 Out 2026<br>
-    R$ 175,69 investidos · 8 conversas geradas
+    Relatório de investimento · 15–22 Out 2026<br>
+    R$ 175,67 investidos · 7 conversas geradas
   </div>
 
 </div>
